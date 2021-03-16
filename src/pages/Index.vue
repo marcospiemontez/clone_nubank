@@ -1,5 +1,6 @@
 <template>
   <q-page class="row q-gutter-sx flex flex-center">
+    <div class = "row q-gutter-sx flex flex-center" v-if="$q.platform.is.mobile">
       <div class=" flex flex-center row items-center justify-around container-logo">
       <q-img src="../assets/logo-white.png" width="55px" />
       <strong> Marcos</strong>
@@ -74,6 +75,14 @@
         </q-card>
       </div>
     </q-scroll-area>
+    </div>
+    <div v-if="$q.platform.is.desktop">
+      <p class="text-h3 text-white">
+        Essa aplicação só é visível via smartphone !!!
+        <br/>
+        Tente acessar por telefone.
+      </p>
+    </div>
   </q-page>
 </template>
 
